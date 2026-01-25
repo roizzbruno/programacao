@@ -1,0 +1,8 @@
+let id = 10
+if (id < 16){
+    console.log('Não vota')
+} else if (id < 18 || id >65){
+        console.log('Voto opcional')
+} else {
+    console.log('Voto obrigatório')
+}

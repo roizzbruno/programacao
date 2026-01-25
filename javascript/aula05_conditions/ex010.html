@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEROPORTO</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input#pais{
+            font: normal 18pt Arial;
+            width: 470px;
+        }
+        input#enviar{
+            font: normal 18pt Arial;
+        }
+        div#res{
+            margin-top: 18pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aeroporto Brasileiro</h1>
+    <p>Digite aqui a sigla do seu país: </p>
+    <input type="text" name="pais" id="pais" placeholder="(Exemplo: EUA/BRA/MEX/ITA/FRA/JPN...)">    <input type="button" id="enviar" value="Enviar" onclick="nacionalidade()">
+    <div id="res">
+        Você é: 
+    </div>
+    <script>
+        function nacionalidade(){
+            let pais = document.getElementById('pais').value.toUpperCase()
+            let res = document.getElementById('res')
+            res.innerHTML = 'Você é: '
+            if (pais === 'BRA') {
+                res.innerHTML += '<strong>BRASILEIRO</strong>!'
+            } else {
+                res.innerHTML += '<strong>ESTRANGEIRO</strong>!'
+            }
+        }
+    </script>
+</body>
+</html>
